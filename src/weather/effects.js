@@ -1,4 +1,4 @@
-import {addToNiDrawList} from '../game-integration/loaders'
+import {addToNiDrawList, removeFromNiDrawList} from '../game-integration/loaders'
 import {coordsToId} from '../utility-functions'
 import {clearLightnings} from './lightnings'
 
@@ -70,17 +70,8 @@ export function clearEffects(clearGameEffects)
 {
     if (INTERFACE === 'NI')
     {
-        if (Engine.npcs.getById(rainEffectId))
-        {
-            Engine.npcs.removeOne(rainEffectId)
-            Engine.wraiths.removeOne('n' + rainEffectId)
-        }
-        if (Engine.npcs.getById(snowEffectId))
-        {
-            Engine.npcs.removeOne(snowEffectId)
-            Engine.wraiths.removeOne('n' + snowEffectId)
-        }
-
+        removeFromNiDrawList(rainEffectId)
+        removeFromNiDrawList(snowEffectId)
         if (clearGameEffects) Engine.weather.onClear()
     }
     else

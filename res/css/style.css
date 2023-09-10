@@ -1,23 +1,27 @@
 /* Chat colors */
-.me, .me .priv-in-general-span { color: #f70 !important }
 
-.sys_comm, .sys_comm .priv-in-general-span { color: #f33 !important }
+/* style of *me */
+.special-style-2 { color: #f70 !important }
 
-.nar, .nar .priv-in-general-span { color: lightblue !important }
+.special-style-nerthus-sys { color: #f33 !important; font-weight: bold }
 
-.nar2, .nar2 .priv-in-general-span { color: #d6a2ff !important }
+.special-style-nerthus-nar1 { color: lightblue !important }
 
-.nar3, .nar3 .priv-in-general-span { color: #00ced1 !important }
+.special-style-nerthus-nar2 { color: #d6a2ff !important }
 
-.dial1, .dial1 .priv-in-general-span { color: #3c6 !important }
+.special-style-nerthus-nar3 { color: #00ced1 !important }
 
-.dial2, .dial2 .priv-in-general-span { color: #c96 !important }
+.wrapper-special-style-nerthus-dial1 { color: #3c6 !important }
 
-.dial3, .dial3 .priv-in-general-span { color: #d3d3d3 !important }
+.wrapper-special-style-nerthus-dial2 { color: #c96 !important }
 
-.dial666, .dial666 .priv-in-general-span { color: #f6f !important }
+.wrapper-special-style-nerthus-dial3 { color: #d3d3d3 !important }
 
-.lang:not(.nick), .lang .priv-in-general-span { color: #dde0ff !important }
+.wrapper-special-style-nerthus-dial666 { color: #f6f !important }
+
+.wrapper-special-style-nerthus-lang .message-section { color: #dde0ff !important }
+
+.wrapper-special-style-nerthus-command { display: none !important }
 
 /* Fix for NI and strange behavior when changing tabs  */
 .me .nick, .sys_comm .nick,
@@ -26,6 +30,14 @@
     display: none;
 }
 
+
+/* Disable clicking on dial Nick */
+.wrapper-special-style-nerthus-dial1 .author-section,
+.wrapper-special-style-nerthus-dial2 .author-section,
+.wrapper-special-style-nerthus-dial3 .author-section,
+.wrapper-special-style-nerthus-dial666 .author-section {
+    pointer-events: none;
+}
 
 /* Default cursor on SI */
 #centerbox2 > .nerthus-panel {
@@ -84,7 +96,7 @@
     align-items: center;
     color: #f0f8ff;
     display: flex;
-    font: bold 14px Georgia;
+    font: bold 14px Georgia, serif;
     margin-left: 5px;
     opacity: 0;
     pointer-events: none;
@@ -294,10 +306,6 @@
 .nerthus-panel .button:hover,
 .nerthus-panel#nerthus-main-panel .button.nerthus-settings-button:hover {
     background-image: linear-gradient(to top, #101010, #434343);
-}
-
-#nerthus-main-panel #button-group-center {
-    padding-top: 30px;
 }
 
 #nerthus-main-panel #button-group-left:before,
@@ -512,7 +520,7 @@
 }
 
 .subpanel .button {
-    font-family: monospace, monospace;
+    font-family: monospace;
     font-size: 16px;
     height: 32px;
     width: 32px;
@@ -520,13 +528,6 @@
 
 .subpanel .button:nth-of-type(4) {
     padding-left: 2px;
-}
-
-.subpanel .button {
-    font-family: monospace, monospace;
-    font-size: 16px;
-    height: 32px;
-    width: 32px;
 }
 
 #nerthus-light-manager .close-decor {

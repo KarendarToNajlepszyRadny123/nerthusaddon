@@ -4,21 +4,25 @@
   "autumn": {},
   "winter": {
     "1": "/obrazki/miasta/zima-ithan.png",
-    "2": "/obrazki/miasta/zima-torneg.png",
-    "9": "/obrazki/miasta/zima-werbin.png",
+    "2": "/obrazki/miasta/zima-torneg.2.png",
+    "9": "#res/img/maps/Werbin - oblężenie - zima.png",
     "33": "/obrazki/miasta/zima-eder.png",
     "35": "/obrazki/miasta/zima-karka-han.png",
-    "114": "/obrazki/miasta/zima-thuzal.png",
+    "114": "/obrazki/miasta/zima-thuzal.2.png",
     "257": "/obrazki/miasta/zima-mythar.png",
     "574": "/obrazki/miasta/zima-nithal.png"
   },
   "default": {
+    "1": "#res/img/maps/Ithan.png",
     "2": "#res/img/maps/Torneg.png",
     "8": "#res/img/maps/Zniszczone Opactwo.png",
     "290": "#res/img/maps/Opactwo.png",
     "291": "#res/img/maps/Opactwo p.1.png",
     "292": "#res/img/maps/Opactwo - piwnica.png",
-    "9": "#res/img/maps/Werbin.png",
+    "9": "#res/img/maps/Werbin - po oblężeniu.png",
+    "1945": "#res/img/maps/Werbin - Opuszczony dom.png",
+    "1975": "#res/img/maps/Wrzosowiska - cmentarz.png",
+    "121": "#res/img/maps/Góry Zrębowe.png",
     "11": "#res/img/maps/Dolina Yss.png",
     "12": "#res/img/maps/Stare Ruiny.png",
     "167": "#res/img/maps/Przeklęty Zamek - wejście południowe.png",
@@ -38,6 +42,11 @@
     "3247": "#res/img/maps/Zapomniana kopalnia p.2.png",
     "3248": "#res/img/maps/Zapomniana kopalnia p.3.png",
     "2546": "#res/img/maps/Nekropolia Karka-han.png",
-    "1108": "#res/img/maps/Leśna Przełęcz.png"
+    "1108": "#res/img/maps/Leśna Przełęcz.png",
+    "37": "#res/img/maps/Brama Północy.png",
+    "4764": "#res/img/maps/Włości rodu Kruzo.png",
+    "2070": "#res/img/maps/Werbin - Mury - skrzydło zachodnie.png",
+    "2071": "#res/img/maps/Werbin - Mury - skrzydło północne.png",
+    "2072": "#res/img/maps/Werbin - Mury - skrzydło wschodnie.png"
   }
 }

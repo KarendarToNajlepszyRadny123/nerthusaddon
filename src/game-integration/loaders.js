@@ -32,15 +32,15 @@ export function initiateGameIntegrationLoaders() //TODO bug: sometimes long load
     }
     else
     {
-        // Handle Szybsze ładowanie gry by Priv
-        const oldParseInput = window._g
-        window._g = function (task)
-        {
-            if (task.includes('initlvl=4')) loadNewMapQueue()
-
-            return oldParseInput.apply(this, arguments)
-        }
-
+        map.__id = map.id
+        Object.defineProperty(map, 'id', {
+            set(val)
+            {
+                this.__id = val
+                setTimeout(loadNewMapQueue, 0)
+            },
+            get() { return this.__id }
+        })
         // Handle Szybsze przechodzenie by Adi Wilk
         window.g.chat.__parsers = window.g.chat.parsers
         Object.defineProperty(window.g.chat, 'parsers', {
@@ -58,4 +58,10 @@ export function addToNiDrawList(preparedObject, id)
 {
     const npcList = Engine.npcs.check()
     npcList[id] = preparedObject
+}
+
+export function removeFromNiDrawList(id)
+{
+    const npcList = Engine.npcs.check()
+    delete npcList[id]
 }
